@@ -54,14 +54,43 @@ html,body{
     top: 0; 
     left: 0;    
 }
-/* .nav-mobile>a{height: 100%;} */
+.nav-dropdown{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.nav-dropdown-content{
+    display: none;
+    width: max-content;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background-color: whitesmoke;
+    text-align:center;
+    box-shadow: 5px 5px 8px hsl(0, 0%, 20%);
+}
+.nav-dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: #282c5c;
+    padding: 9px 9px;
+    margin: 0 4px;
+    font-size: 16px;
+}
+.nav-dropdown-content a:nth-child(1),.nav-dropdown-content a:nth-child(2),.nav-dropdown-content a:nth-child(3){
+    border-width: 0 0 1.5px 0;
+    border-color: #282c5c;
+    border-style: solid ;
+}
+.nav-dropdown-content a:hover,.nav-dropdown-content a:active{background-color: hsl(0, 0%, 90%);}
+.nav-dropdown:hover .nav-dropdown-content, .nav-dropdown:active .nav-dropdown-content{display: block;}
 .menu,.nav-i{height: 52px; aspect-ratio: 1/1;}
 .nav-ii,.nav-iii{align-items: center!important;}
 .nav-ii>a:link,.nav-ii>a:visited{
     color: white;
     text-decoration: none;
     transition: 1s;
-
 }
 .nav-ii,.nav-iii{
     display: flex;
@@ -272,7 +301,12 @@ a.two-b-four>img{
     font-weight: 500;
 }
 /* Hover styles */
-
+.nav-ii>a:hover{
+    color: white;
+    text-decoration: underline;
+    transition: 1s;
+    font-size: 17.5px;
+}
 .two-b-four:link,.two-b-four:visited{
     font-size: 16px;
     height: 19px;
@@ -317,6 +351,7 @@ a.two-b-four>img{
     /* HOVER STYLES */
     .menu:link,.nav-i:link{height: 36px; aspect-ratio: 1/1; transition: .5s;}
     .menu:active,.nav-i:active{height: 38px; aspect-ratio: 1/1; transition: .5s;}
+    img.menu{position: relative;}
 }
 
 
